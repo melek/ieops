@@ -1,0 +1,5 @@
+# pre-ratification-inference.log
+# Append-only provenance log for vision-shaping inference calls during bootstrap.
+# One record per load-bearing inference call: packet (or hash), consumer identity,
+# decision/output, timestamp. Active until Vision Envelope §8 ratifies a project
+# provenance-audit location.
