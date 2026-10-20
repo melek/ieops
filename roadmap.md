@@ -6,6 +6,8 @@
 
 The roadmap is itself a methodology artifact and is governed by the same commitments as the rest of ieops (see `phase-1-commitments.md`).
 
+**A note on provenance.** Each entry's **Provenance** line names the review lens that raised the item. These reviews were simulated: panels of AI personas, each prompted to critique the methodology from the perspective of one named framework or author (Flyvbjerg's reference-class forecasting, Hollnagel's resilience engineering, Leveson's STPA, Ousterhout's module depth, Leino's program proofs). The named authors did not review ieops, and quoted critiques are persona output, not their words.
+
 ---
 
 ## v0.2 — Methodology self-observation
@@ -18,7 +20,7 @@ This cluster addresses how the methodology observes its own operation in practic
 
 **Why deferred.** Requires design pass on replay cadence (per-stage-gate / per-Heartbeat / sampling rate), sample selection criterion (which audit records, how chosen), divergence-recording form, and integration with the existing audit-log discipline. Worth getting right rather than shipping a thin version in v0.1.
 
-**Provenance.** Hollnagel and Flyvbjerg both flagged the agent-multiplicity gap. Hollnagel: "the operator reporting divergence is the same operator whose divergence is in question; there is no second channel." Flyvbjerg: similar critique at the Scoping-exit reference-class-sizing step.
+**Provenance.** The Hollnagel-lens and Flyvbjerg-lens personas both flagged the agent-multiplicity gap. Hollnagel-lens persona: "the operator reporting divergence is the same operator whose divergence is in question; there is no second channel." Flyvbjerg-lens persona: similar critique at the Scoping-exit reference-class-sizing step.
 
 ### Unsafe-control-action (UCA) enumeration framework
 
@@ -26,7 +28,7 @@ This cluster addresses how the methodology observes its own operation in practic
 
 **Why deferred.** Substantive vocabulary lift. The categorization benefits from real operator-record data to calibrate which UCAs are common in practice; v0.1 ships before that data exists.
 
-**Provenance.** Leveson named this directly; Hollnagel and Ousterhout converged on the same gap from work-as-done and module-depth lenses respectively.
+**Provenance.** The Leveson-lens persona named this directly; the Hollnagel-lens and Ousterhout-lens personas converged on the same gap from work-as-done and module-depth angles respectively.
 
 ### STPA control-structure artifact + traceability sub-spine
 
@@ -34,7 +36,7 @@ This cluster addresses how the methodology observes its own operation in practic
 
 **Why deferred.** Substantive new artifact plus a parallel traceability spine. Worth landing after the UCA framework (above) so the artifact and spine reference a stable vocabulary.
 
-**Provenance.** Leveson named both the control-structure artifact and the traceability sub-spine. The current `anchor-map.md` cites STPA as cross-cutting at Scoping / Development / Heartbeat but the methodology does not draw the structure it claims to compose with.
+**Provenance.** The Leveson-lens persona named both the control-structure artifact and the traceability sub-spine. The current `anchor-map.md` cites STPA as cross-cutting at Scoping / Development / Heartbeat but the methodology does not draw the structure it claims to compose with.
 
 ---
 
@@ -48,7 +50,7 @@ This cluster sharpens how ieops scopes and operates project work. The reference-
 
 **Why deferred.** The machinery is useful only when ieops has accumulated reference-class data to draw from. v0.1–v0.2 use ieops on a small number of projects; v0.3 captures the discipline once the data exists.
 
-**Provenance.** Flyvbjerg named this as the dominant gap against the iron law. "Naming a comparison class is not reference-class forecasting; producing a base-rate-corrected estimate is."
+**Provenance.** The Flyvbjerg-lens persona named this as the dominant gap against the iron law: "Naming a comparison class is not reference-class forecasting; producing a base-rate-corrected estimate is."
 
 ### Modularity decision criterion at Scoping exit
 
@@ -56,7 +58,7 @@ This cluster sharpens how ieops scopes and operates project work. The reference-
 
 **Why deferred.** The criterion's value scales with the size of the project space ieops manages. In v0.1 the methodology itself is a single horizon; the criterion is more useful as ieops sees adoption.
 
-**Provenance.** Flyvbjerg. The criterion was proposed alongside the reference-class forecast, but stands on its own.
+**Provenance.** Flyvbjerg-lens persona. The criterion was proposed alongside the reference-class forecast, but stands on its own.
 
 ### Operator-behavior anticipation register
 
@@ -64,7 +66,7 @@ This cluster sharpens how ieops scopes and operates project work. The reference-
 
 **Why deferred.** Substantive per-predicate addition. Selective application possible in v0.1 (high-stakes predicates only); full pass deferred to v0.3.
 
-**Provenance.** Hollnagel. The bootstrap-copy pattern was a work-as-done finding masquerading as a procedural rule; the register generalizes it.
+**Provenance.** Hollnagel-lens persona. The bootstrap-copy pattern was a work-as-done finding masquerading as a procedural rule; the register generalizes it.
 
 ---
 
@@ -78,7 +80,7 @@ This cluster carries items deferred for principled reasons (overbuild avoidance,
 
 **Why deferred.** `phase-1-commitments.md` §4.4 explicitly names overbuild-avoidance as the Heartbeat-stage directive until real runtime signals exist to specify against. The contract is worth writing once ieops has been operated through Deployment-and-Heartbeat at least once.
 
-**Provenance.** Hollnagel. The current X.DP.3 / X.H.1 clauses are presence-decidable but content-dependent in a way that does no methodology work; the contract makes them substantive.
+**Provenance.** Hollnagel-lens persona. The current X.DP.3 / X.H.1 clauses are presence-decidable but content-dependent in a way that does no methodology work; the contract makes them substantive.
 
 ### NASA P10 instantiation
 
@@ -86,15 +88,15 @@ This cluster carries items deferred for principled reasons (overbuild avoidance,
 
 **Why deferred.** Project-stage obligation work. The verification-application rule in `phase-1-commitments.md` §3 already names P10 as a project obligation, not a methodology obligation; v1.0 specifies which rules in a way that downstream projects can adopt or amend.
 
-**Provenance.** Leino. "Naming without contract" is a recurring meta-pattern; v1.0 closes it for P10.
+**Provenance.** Leino-lens persona. "Naming without contract" is a recurring meta-pattern; v1.0 closes it for P10.
 
 ### Stage section re-organization
 
 **What.** Re-organize the cross-stage cross-cuts in `phase-1-commitments.md` §4.1 (weight per stage) and `phase-1-contracts.md` §7 (anchor per stage), §12 (entry/exit per stage), §13 (traceability per stage) into per-stage sub-sections so each stage's treatment is contiguous. The v0.1 form keeps the cross-cut as the organizing principle (per the decomposition into commitments/contracts files); v1.0 considers whether per-stage organization becomes the preferred shape once the methodology has more accumulated material.
 
-**Why deferred.** The v0.1 decomposition handles the most-load-bearing case of Ousterhout's stage-conflation concern (the per-stage cross-reference structure, with stages grouped by file in commitments vs. contracts). Full per-stage re-organization is the heavier alternative and is worth considering against accumulated v0.2 and v0.3 material before committing.
+**Why deferred.** The v0.1 decomposition handles the most-load-bearing case of the Ousterhout-lens persona's stage-conflation concern (the per-stage cross-reference structure, with stages grouped by file in commitments vs. contracts). Full per-stage re-organization is the heavier alternative and is worth considering against accumulated v0.2 and v0.3 material before committing.
 
-**Provenance.** Ousterhout. The lighter v0.1 form was Ousterhout's "lighter option"; the heavier form is the alternative path for v1.0 if the cross-cut organization shows strain.
+**Provenance.** Ousterhout-lens persona. The lighter v0.1 form was that persona's "lighter option"; the heavier form is the alternative path for v1.0 if the cross-cut organization shows strain.
 
 ---
 

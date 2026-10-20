@@ -50,8 +50,10 @@ first-run logic.
 ## Maintaining ieops
 
 The v0.1 release in `workspace-template/methodology/` is a cleaned derivation of an
-internal working copy; the methodology's full development provenance (panel records,
-decision log) lives outside this repository. There is no render or generate step:
+internal working copy; the methodology's full development provenance (records of the
+simulated-persona review panels, decision log) lives outside this repository. Where
+`roadmap.md` attributes a critique to a named author, it means an AI persona reviewing
+through that author's framework, not the author. There is no render or generate step:
 the methodology evolves by editing these files directly (or re-deriving the clean
 release) when a ratified change lands, with the change reflected in `roadmap.md`.
 
